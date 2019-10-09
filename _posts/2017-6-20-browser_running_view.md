@@ -29,7 +29,7 @@ tages:
 ```
 浏览器会解析HTML构建相应的DOM树：
 
-![](http://www.ixsrc.cn/img/borswer-running-dom.png)
+![](http://console-log.cn/img/borswer-running-dom.png)
 这样DOM就构建好了
 
 ## 渲染树构建：

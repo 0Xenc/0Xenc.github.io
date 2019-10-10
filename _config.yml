@@ -1,7 +1,7 @@
 ﻿# Site settings
 title: Blog of Xenc
 SEOTitle: Xenc Blog
-header-img: https://cn.bing.com/th?id=OHR.BubbleNebula_ZH-CN2787112807_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp
+header-img: img/head.jpg
 email: root@console-log.cn
 description: "关于Web安全、渗透测试、漏洞分析、CTF的一只博客|无描述"
 keyword: "web安全,CTF,渗透测试,漏洞分析,白帽子,计算机网络技术,网络安全"

@@ -30,10 +30,10 @@ echo $_GET[fuzz];
 ?>
 ```
 dog:
-![dog](./img/5.jpg)
+![dog](http://console-log.cn/img/5.jpg)
 
 通过burp来测试一下安全狗过滤了哪些标签
-![labs](./img/1.jpg)
+![labs](http://console-log.cn/img/1.jpg)
 
 发现有这些标签是没有被过滤的
 >a
@@ -130,7 +130,7 @@ for(i=0;i<labs.length;i++){
 因为很多`onload`、`onerror`都是和`src`属性名配合使用的，所以我在xss payload标签山添加了src
 
 然后放在浏览器测试：
-![xss](./img/2.jpg)
+![xss](http://console-log.cn/img/2.jpg)
 很快我们就收获了几个可以绕过安全狗的xss payload
 然后更具alert出来的值快速定位payload地址 得到了两个标签下的payload
 ```

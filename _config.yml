@@ -89,5 +89,8 @@ service-worker: true
 
 # Friends
 friends: [
-"CyberSecurity" : "https://1337er.com/"
+    {
+        title: "CyberSecurity",
+        href: "https://1337er.com/"
+    }
 ]

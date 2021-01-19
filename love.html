@@ -1,0 +1,152 @@
+<html>
+<head>
+    <title>❤️</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: RGB(252,192,200);
+        }
+        .top-img{
+            width: 100%;
+            margin-top: -50px;
+        }
+        .center-img{
+            width: 200px;
+        }
+        .div-top{
+            text-align: center;
+            height:20%;
+            padding-top: 20px;
+        }
+        .div-center{
+            text-align: center;
+            height:40%;
+        }
+        .div-buttom {
+
+            margin-top: 5%;
+            height:30%;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        .div-top > span{
+            font-size: larger;
+            font-weight:bold;
+                font-family: cursive;
+        }
+        .music{
+            display: none;
+        }
+        #dialog{
+            text-align: left;
+            width: 50%;
+        }
+        .div-buttom-span{
+            text-align: center;
+        }
+        .buttom-span{
+            font-size: 30px;
+            width: 50%;
+            height: 50%;;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+</head>
+<body>
+    <div class="music">
+        <iframe allow="autoplay" src="https://sf3-dycdn-tos.pstatp.com/obj/ies-music/6901225706215508750.mp3"></iframe>
+    </div>
+    <div class="top">
+        <div class="div-top">
+            <span>送给我的刘琳</span>
+            <img src="https://wimg.588ku.com/gif620/20/04/10/75b0ce07bfac78cfb2052bf29b86206c.gif" class="top-img">
+        </div>
+
+        <div class="div-center">
+            <img src="https://wimg.588ku.com/gif620/20/05/13/fdc1a722b340304184781d456e3a0de1.gif" class="center-img">
+        </div>
+
+        <div class="div-buttom">
+            <div class="div-buttom-span">
+                <span class="buttom-span" >
+                    宝贝来啦~~
+                </span>
+                <span class="buttom-span" >
+                    马上进入主题哦
+                </span>
+                <span class="buttom-span" >
+                    再说一下我爱你^_^
+                </span>
+            </div>
+            <span id="dialog">
+
+            </span>
+        </div>
+    </div>
+    <script>
+        var loveMyGirlFriend60ToDialog =
+            "亲爱的刘琳宝贝，我们相爱已经800+天，" +
+            "你是我这辈子遇到的美丽的女人，" +
+            "就连做梦都想要娶你，更别说现实啦。"+
+            "我希望现在是你、以后是你、未来也是你"+
+            "从0到1，从我到你，从我到爱你~"
+        var i = 0;
+
+        setTimeout(function (){
+            var i = 0;
+            setInterval(function (){
+                var html = $("#dialog").html();
+                html = html.replace("❤","");
+                html += loveMyGirlFriend60ToDialog.charAt(i++) + "❤";
+                $("#dialog").html(html);
+            },300);
+        },12000);
+        $(function (){
+            var time = 0;
+            setInterval(function (){
+                time++;
+                console.log(time);
+                switch (time){
+                    case 2:
+                        spans.each(function (){
+                            $(this).hide(0);
+                        });
+                        $(spans[0]).fadeIn(2000,"linear");
+                        break;
+                    case 6:
+                        spans.each(function (){
+                            $(this).hide(0);
+                        });
+                        $(spans[1]).fadeIn(2000,"linear");
+                        break;
+                    case 10:
+                        spans.each(function (){
+                            $(this).hide(0);
+                        });
+                        $(spans[2]).fadeIn(2000,"linear");
+                        break;
+                    case 12:
+                        spans.each(function (){
+                            $(this).hide(0);
+                        });
+                        //$(spans[2]).fadeIn(2000,"linear");
+                        break;
+                }
+            },1000);
+            var spans = $(".buttom-span");
+            spans.each(function (){
+                $(this).hide(0);
+            });
+
+
+        });
+    </script>
+
+</body>
+</html>

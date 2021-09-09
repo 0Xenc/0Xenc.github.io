@@ -1,0 +1,63 @@
+<head>
+<meta charset="utf-8"/>
+</head>
+<script>
+var DPS = {};
+var iu = {};
+iu.url = {
+    get: function(key, url) {
+        var i, length, item, list = (url || location.search).replace(/^.*?[?#]/, "").split("&");
+        for (i = 0,
+        length = list.length; i < length; i++) {
+            item = list[i].split("=");
+            if (item[0] == key) {
+                try {
+                    return decodeURIComponent(item[1])
+                } catch (e) {
+                    return item[1]
+                }
+            }
+        }
+        return null
+    },
+    getRedirect: function() {
+        var domain = document.domain;
+        var redirect = iu.url.get("redirect");
+        if (redirect && /^https?:\/\//.test(redirect)) {
+            if (/\..*\./.test(domain)) {
+                domain = domain.replace(/^.*?\./, "")
+            }
+            var host = redirect.replace(/^.*?\/\//, "").replace(/[/?#].*$/, "");
+            if (!/[^\w.-]/.test(host)) {
+                var i = host.indexOf(domain);
+                if (i > -1 && i + domain.length == host.length) {
+                    return redirect
+                }
+            }
+        }
+        return null
+    }
+};
+DPS.url = iu.url
+
+function checkRedirect() {
+    var d = document;
+    if (d.domain && DPS.url.get("redirect") && !DPS.url.getRedirect()) {
+        setTimeout(function() {
+            d.title = "网址异常"
+        })
+    }else if(DPS.url.get("redirect") && DPS.url.getRedirect()){
+		
+		var redirect = iu.url.get("redirect");
+		var host = redirect.replace(/^.*?\/\//, "").replace(/[/?#].*$/, "");
+		console.log(host);
+		if(!host.match("(.*)\\."+d.domain) && host.indexOf(d.domain) != 0){
+			alert("Win!");
+		}
+	}
+}
+
+if(DPS.url.get("redirect")){
+	checkRedirect();
+}
+</script>
